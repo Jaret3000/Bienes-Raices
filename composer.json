@@ -1,0 +1,22 @@
+{
+    "name": "hp/bienesraices",
+    "description": "Proyecto de bienes raices usando POO en php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jaret",
+            "email": "jaretitosayuso@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.11",
+        "phpmailer/phpmailer": "^7.0"
+    }
+}

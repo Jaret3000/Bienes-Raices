@@ -1,0 +1,115 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet{
+        align-items: flex-end;
+    }
+
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        filter: invert(100%);
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        @include m.tablet{
+            margin-top: 0;
+        }
+    }
+}
+
+.barra {
+    display: grid;
+    grid-template-columns: 1fr; // una sola columna en móvil
+    justify-items: center;
+    align-content: center;
+    padding-top: 3rem;
+    row-gap: 1.5rem; // separa logo y hamburguesa en móvil
+
+    // En escritorio: logo y nav en fila
+    @include m.tablet {
+        grid-template-columns: auto 1fr; // logo + nav
+        align-items: flex-end;
+        justify-items: normal;
+        row-gap: 0;
+
+        > a {
+            justify-self: start; // logo a la izquierda
+        }
+
+        > .navegacion {
+            justify-self: end;
+        }
+    }
+}
+
+.barra > a img {
+    width: 35rem; 
+    height: auto;
+    display: block;
+}
+
+.navegacion {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
+
+    @include m.tablet {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    a {
+        color: v.$blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+
+        @include m.tablet {
+            margin-right: 2rem;
+            font-size: 1.8rem;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: v.$verde;
+        }
+    }
+}
+
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @include m.tablet {
+        display: none;
+    }
+
+    img {
+        width: 3.5rem;
+        height: auto;
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}

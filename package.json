@@ -1,0 +1,46 @@
+{
+  "name": "bienesraices",
+  "version": "1.0.0",
+  "description": "proyecto de prueba con SASS y Gulp",
+  "keywords": [
+    "php",
+    "CSS",
+    "SASS",
+    "GULP",
+    "PHP"
+  ],
+  "license": "ISC",
+  "author": "Jaret Lopez Ayuso",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "images": "npx imagemin src/img/* --plugin=mozjpeg --plugin=optipng --plugin=svgo --out-dir=build/img"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^6.1.2",
+    "del": "^8.0.0",
+    "gulp": "^5.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^8.0.0",
+    "sass": "^1.79.3"
+  },
+  "overrides": {
+    "postcss": "^8.4.47",
+    "svgo": "^3.3.2",
+    "glob": "^10.3.12",
+    "uuid": "^9.0.1",
+    "rimraf": "^4.4.1",
+    "core-js": "^3.39.0"
+  }
+}
