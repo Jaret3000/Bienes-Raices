@@ -122,7 +122,4 @@ El objetivo principal del proyecto es desarrollar una plataforma inmobiliaria fu
 
 Proyecto desarrollado como parte de la formación y práctica en **desarrollo web Full Stack**.
 
----
-
-⭐ Si te interesa el proyecto, puedes consultar el código fuente en el repositorio de GitHub.
 
